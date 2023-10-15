@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 
 using FSM;
+using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -15,7 +16,7 @@ namespace Player
         [HideInInspector] public PRunState _PRunState;
 
         public AudioSource _audioSource;
-        public Collider _collider;
+        [FormerlySerializedAs("_collider")] public Collider2D _collider2D;
         public Rigidbody2D _rigidbody2D;
         public Animator _animator;
         public SpriteRenderer _spriteRenderer;
@@ -23,32 +24,37 @@ namespace Player
 
         private void Awake()
         {
-            _audioSource = GetComponent<AudioSource>();
-            if (_audioSource == null)
-                Debug.Log("AudioSource: " + _audioSource);
-
-            _collider = GetComponent<Collider>();
-            if (_collider == null)
-                Debug.Log("Collider: " + _collider);
-
-            _rigidbody2D = GetComponent<Rigidbody2D>();
-            if (_rigidbody2D == null)
-                Debug.Log("Rigidbody2D: " + _rigidbody2D);
-
-            _animator = GetComponent<Animator>();
-            if (_animator == null)
-                Debug.Log("Animator: " + _animator);
-
-            _spriteRenderer = GetComponent<SpriteRenderer>();
-            if (_spriteRenderer == null)
-                Debug.Log("SpriteRenderer");
+            TryGetComponent<AudioSource>(out _audioSource);
+            TryGetComponent<Collider2D>(out _collider2D);
+            TryGetComponent<Rigidbody2D>(out _rigidbody2D);
+            TryGetComponent<Animator>(out _animator);
+            TryGetComponent<SpriteRenderer>(out _spriteRenderer);
             
+            // _audioSource = GetComponent<AudioSource>();
+            // _collider2D = GetComponent<Collider2D>();
+            // _rigidbody2D = GetComponent<Rigidbody2D>();
+            // _animator = GetComponent<Animator>();
+            // _spriteRenderer = GetComponent<SpriteRenderer>();
 
+
+            CheckComponentNull(_audioSource);
+            CheckComponentNull(_collider2D);
+            CheckComponentNull(_rigidbody2D);
+            CheckComponentNull(_animator);
+            CheckComponentNull(_spriteRenderer);
 
 
             _pIdleState = new PIdleState("PIdleState", this);
             _PRunState = new PRunState("PRunState", this);
 
+        }
+        
+        public void CheckComponentNull(Component component)
+        {
+            if (component == null)
+            {
+                Debug.Log(component.name + component);
+            }
         }
 
 

@@ -3,27 +3,32 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PIdleState : PAllStates
+    public class PIdleState : PPatrolState
     {
         protected PStateMachine _pStateMachine;
-        protected AudioSource _audioSource;
+        
         public PIdleState(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
             _pStateMachine = (PStateMachine) stateMachine;
-
-            _audioSource = _pStateMachine._audioSource;
-            if (_audioSource == null)
-                Debug.Log("AudioSource: " + _audioSource);
+            
         }
         
         public override void Enter()
         {
             base.Enter();
+            _rigidbody2D.velocity = _rigidbody2D.velocity * 0.5f;
+            
+            Debug.Log("Idle: x: " + _prevPosX + ", y: " + _prevPosY);
+            
+            
         }
 
         public override void UpdateLogic()
         {
             base.UpdateLogic();
+            _animator.SetFloat(a_floPosX, _prevPosX);
+            _animator.SetFloat(a_floPosY, _prevPosY);
+            
         }
 
         public override void UpdatePhysics()

@@ -3,14 +3,9 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PRunState : PAllStates
+    public class PRunState : PPatrolState
     {
         protected PStateMachine _pStateMachine;
-        protected AudioSource _audioSource;
-
-        private string a_floSpeed = "floSpeed";
-        private string a_floPosX = "floPosX";
-        private string a_floPosY = "floPosY";
         
         private Vector2 _direction;
         private float _speed = 7f;
@@ -19,9 +14,6 @@ namespace Player
         {
             _pStateMachine = (PStateMachine) stateMachine;
 
-            _audioSource = _pStateMachine._audioSource;
-            if (_audioSource == null)
-                Debug.Log("AudioSource: " + _audioSource);
         }
         
         public override void Enter()
@@ -38,12 +30,30 @@ namespace Player
             _direction.x = _horizontalInput;
             _direction.y = _verticalInput;
             _animator.SetFloat(a_floSpeed, _direction.magnitude);
+
+            if (_horizontalInput > 0)
+                _prevPosX = 1;
+            else if (_horizontalInput < 0)
+                _prevPosX = -1;
+
+            if (_verticalInput > 0)
+                _prevPosY = 1;
+            else if (_verticalInput < 0)
+                _prevPosY = -1;
         }
 
         public override void UpdatePhysics()
         {
             base.UpdatePhysics();
             _rigidbody2D.AddForce(_direction * _speed);
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            Debug.Log("Run: x: " + _prevPosX + ", y: " + _prevPosY);
+            
+            
         }
     }
 }

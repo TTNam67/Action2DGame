@@ -16,11 +16,23 @@ namespace FSM
 
         public virtual void Enter()
         {
-            // Debug.Log("Entering " + name);  
+            Debug.Log("Entering " + name);  
         }
-        public virtual void UpdateLogic() { }
-        public virtual void UpdatePhysics() { }
-        public virtual void Exit() { }
+
+        public virtual void UpdateLogic()
+        {
+            Debug.Log(name + " UpdateLogic" );
+        }
+
+        public virtual void UpdatePhysics()
+        {
+            // Debug.Log(name + " UpdatePhysics");
+        }
+
+        public virtual void Exit()
+        {
+            Debug.Log(name + " Exit");
+        }
 
     }
 }
