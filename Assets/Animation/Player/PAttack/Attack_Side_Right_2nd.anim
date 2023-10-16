@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack_Back_2nd
+  m_Name: Attack_Side_Right_2nd
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,23 +21,23 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1720816594, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - time: 0.06666667
-      value: {fileID: 605857906, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - time: 0.18333334
-      value: {fileID: -1163791939, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
+      value: {fileID: 814269270, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - time: 0.033333335
+      value: {fileID: 553551311, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - time: 0.1
+      value: {fileID: 799327884, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - time: 0.15
+      value: {fileID: 1994989766, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
     - time: 0.25
-      value: {fileID: 315749629, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
+      value: {fileID: -657124320, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - time: 0.3
+      value: {fileID: 1704907703, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
     - time: 0.35
-      value: {fileID: -1430634493, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
+      value: {fileID: 152148006, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
     - time: 0.41666666
-      value: {fileID: 1921807797, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - time: 0.48333332
-      value: {fileID: -1437479824, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - time: 0.6
-      value: {fileID: -1179563010, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - time: 0.6666667
-      value: {fileID: 659573570, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
+      value: {fileID: -1675698780, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - time: 0.45
+      value: {fileID: 1033251161, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -60,21 +60,21 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1720816594, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - {fileID: 605857906, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - {fileID: -1163791939, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - {fileID: 315749629, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - {fileID: -1430634493, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - {fileID: 1921807797, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - {fileID: -1437479824, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - {fileID: -1179563010, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
-    - {fileID: 659573570, guid: 3f723d1dc22a76349bf55752b1468ab2, type: 3}
+    - {fileID: 814269270, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - {fileID: 553551311, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - {fileID: 799327884, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - {fileID: 1994989766, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - {fileID: -657124320, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - {fileID: 1704907703, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - {fileID: 152148006, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - {fileID: -1675698780, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
+    - {fileID: 1033251161, guid: b7b0cd3730878bf4ea1bd591e9da27d8, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.71666664
+    m_StopTime: 0.48333332
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -94,7 +94,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.71666664
+  - time: 0.48333332
     functionName: ChangeToIdle
     data: 
     objectReferenceParameter: {fileID: 0}

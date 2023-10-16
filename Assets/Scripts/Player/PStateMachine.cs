@@ -15,6 +15,7 @@ namespace Player
         [HideInInspector] public PIdleState _pIdleState;
         [HideInInspector] public PRunState _PRunState;
         [HideInInspector] public PDashState _pDashState;
+        [HideInInspector] public PAttackState _pAttackState;
 
         public AudioSource _audioSource;
         [FormerlySerializedAs("Something")] public Collider2D _collider2D;
@@ -48,6 +49,7 @@ namespace Player
             _pIdleState = new PIdleState("PIdleState", this);
             _PRunState = new PRunState("PRunState", this);
             _pDashState = new PDashState("PDashState", this);
+            _pAttackState = new PAttackState("PAttackState", this);
 
         }
         
@@ -63,6 +65,11 @@ namespace Player
         protected override BaseState GetInitialState()
         {
             return _pIdleState;
+        }
+
+        public void ChangeToIdle()
+        {
+            ChangeState(_pIdleState);
         }
 
 

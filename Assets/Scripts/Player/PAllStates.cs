@@ -19,6 +19,11 @@ namespace Player
 
         protected static float _prevPosX;
         protected static  float _prevPosY;
+        protected string a_floPosX = "floPosX";
+        protected string a_floPosY = "floPosY";
+        
+        protected float _timeCountAttackCombo = 0;
+        protected float _countAttackCombo = -1;
         
         public PAllStates(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
@@ -53,6 +58,10 @@ namespace Player
             
             _direction.x = _horizontalInput;
             _direction.y = _verticalInput;
+
+            _timeCountAttackCombo += Time.deltaTime;
+
+            
             
         }
     }

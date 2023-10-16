@@ -8,8 +8,7 @@ namespace Player
         protected AudioSource _audioSource;
         
         protected string a_floSpeed = "floSpeed";
-        protected string a_floPosX = "floPosX";
-        protected string a_floPosY = "floPosY";
+        
         protected string a_dash = "triDash";
         protected string a_isMoving = "booIsMoving";
 
@@ -60,6 +59,10 @@ namespace Player
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 _pStateMachine.ChangeState(_pStateMachine._pDashState);
+            }
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                _pStateMachine.ChangeState(_pStateMachine._pAttackState);
             }
             
         }
