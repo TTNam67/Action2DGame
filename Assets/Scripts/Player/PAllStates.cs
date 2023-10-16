@@ -15,6 +15,7 @@ namespace Player
 
         protected float _horizontalInput; //Input horizontal
         protected float _verticalInput;
+        protected Vector2 _direction;
 
         protected static float _prevPosX;
         protected static  float _prevPosY;
@@ -50,7 +51,8 @@ namespace Player
             _horizontalInput = Input.GetAxis("Horizontal");
             _verticalInput = Input.GetAxis("Vertical");
             
-
+            _direction.x = _horizontalInput;
+            _direction.y = _verticalInput;
             
         }
     }

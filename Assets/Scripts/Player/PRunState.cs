@@ -5,14 +5,12 @@ namespace Player
 {
     public class PRunState : PPatrolState
     {
-        protected PStateMachine _pStateMachine;
         
-        private Vector2 _direction;
-        private float _speed = 7f;
+        // private float _speed = 7f;
         
         public PRunState(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
-            _pStateMachine = (PStateMachine) stateMachine;
+            _speed = _runSpeed; 
 
         }
         
@@ -27,8 +25,7 @@ namespace Player
             _animator.SetFloat(a_floPosX, _horizontalInput);
             _animator.SetFloat(a_floPosY, _verticalInput);
 
-            _direction.x = _horizontalInput;
-            _direction.y = _verticalInput;
+            
             _animator.SetFloat(a_floSpeed, _direction.magnitude);
 
             if (_horizontalInput > 0)
@@ -51,7 +48,6 @@ namespace Player
         public override void Exit()
         {
             base.Exit();
-            Debug.Log("Run: x: " + _prevPosX + ", y: " + _prevPosY);
             
             
         }

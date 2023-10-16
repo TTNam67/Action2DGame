@@ -14,9 +14,10 @@ namespace Player
 
         [HideInInspector] public PIdleState _pIdleState;
         [HideInInspector] public PRunState _PRunState;
+        [HideInInspector] public PDashState _pDashState;
 
         public AudioSource _audioSource;
-        [FormerlySerializedAs("_collider")] public Collider2D _collider2D;
+        [FormerlySerializedAs("Something")] public Collider2D _collider2D;
         public Rigidbody2D _rigidbody2D;
         public Animator _animator;
         public SpriteRenderer _spriteRenderer;
@@ -46,6 +47,7 @@ namespace Player
 
             _pIdleState = new PIdleState("PIdleState", this);
             _PRunState = new PRunState("PRunState", this);
+            _pDashState = new PDashState("PDashState", this);
 
         }
         
